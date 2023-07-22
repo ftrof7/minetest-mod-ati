@@ -11,9 +11,6 @@ minetest.register_globalstep(function(dtime)
 						inv:add_item("main", ItemStack(itemstring))
 						if itemstring ~= "" then
 							local itemname = ItemStack(itemstring):to_table().name
-							if minetest.get_item_group(itemname, "rupee") ~= 0 then
-							else
-							end
 						end
 						object:get_luaentity().itemstring = ""
 						object:remove()
